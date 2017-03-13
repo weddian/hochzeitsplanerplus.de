@@ -230,7 +230,7 @@ a:focus {
 .main-header {
   position: relative;
   text-align: center;
-  background: #51153B url(http://placehold.it/1920x920) no-repeat bottom center;
+  background: #51153B url(img/background.jpg) no-repeat bottom center;
   background-size: cover;
 }
 .main-header:after {
