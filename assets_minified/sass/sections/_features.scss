@@ -1,0 +1,143 @@
+.features {
+	padding: 67px 0 0;
+	text-align: center;
+
+	img {
+		max-width: 100%;
+	}
+
+	.title {
+		margin-bottom: 8px;
+		font-weight: 700;
+		font-size: 15px;
+		text-align: left;
+	}
+
+	p {
+		font-size: 15px;
+		line-height: 24px;
+		text-align: left;
+	}
+
+	.inner-content {
+		margin: 76px -15px 90px;
+
+		.feature-boxes {
+			margin-top: 31px;
+
+			.feature-box {
+				margin: 11px 0;
+
+				img {
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+
+	.img-wrapper {
+		width: 220px;
+		height: 453px;
+		margin: 0 auto;
+		background: url(../../img/bgi/phone.png) no-repeat center center;
+		background-size: 100% 100%;
+
+		.img-holder {
+			padding: 52px 11px 0 12px;
+
+			img {
+				width: 100%; 
+			}
+		}
+	}
+}
+
+/* Media Queries --------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.features {
+		padding-top: 60px;
+
+		.inner-content {
+			margin-bottom: 60px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	
+	.features {
+
+		.img-wrapper {
+			width: 200px;
+			height: 403px;
+
+			.img-holder {
+				padding: 41px 11px 0 11px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+
+	.features {
+
+		.inner-content {
+
+			.feature-boxes {
+				margin-top: -12px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.features {
+		padding-top: 60px;
+
+		.inner-content {
+			margin: 55px 0 30px;
+		}
+
+	}
+}
+
+@media screen and (min-width: 544px) and (max-width: 767px) {
+	
+	.features {
+
+		.img-wrapper {
+			width: 183px;
+			height: 376px;
+
+			.img-holder {
+				padding: 43px 10px 0 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 543px) {
+
+	.features {
+		padding-top: 50px;
+
+		.subtitle br {
+			display: none;
+		}
+
+		.inner-content {
+
+			.feature-boxes {
+				margin-top: 40px;
+
+				.feature-box {
+					margin: 15px 0;
+				}
+			}
+		}
+	}
+}
+
+/**/

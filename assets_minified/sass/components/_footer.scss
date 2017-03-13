@@ -1,0 +1,22 @@
+.footer {
+	background: #F4F4F4;
+	padding: 18px 0;
+	font-size: 13px;
+	line-height: 17px;
+	text-align: center;
+	color: #737a88;
+
+	br {
+		display: none;
+	}
+}
+
+/* Media Queries ------------------------------ */
+@media screen and (max-width: 543px) {
+
+	.footer br {
+		display: block;
+	}
+}
+
+/**/

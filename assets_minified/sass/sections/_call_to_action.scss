@@ -1,0 +1,229 @@
+.section-download {
+	padding: 67px 0 0;
+	text-align: center; 
+
+	.subtitle {
+		margin-bottom: 44px;
+	}
+
+	.img-holder {
+		margin-top: 50px;
+		padding-right: 65px;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.subscription {
+		position: relative;
+		z-index: 0;
+
+		> div {
+			padding: 13px 0 40px;
+			position: relative;
+			z-index: 10;
+			background: #fff;
+		}
+
+		&:before, &:after {
+			content: '';
+			display: block; 
+			width: 200%;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c1c1c1+0,ffffff+100&0.34+0,0+70,0+100 */
+			background: -moz-radial-gradient(center, ellipse cover,  rgba(193,193,193,0.34) 0%, rgba(236,236,236,0) 70%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+			background: -webkit-radial-gradient(center, ellipse cover,  rgba(193,193,193,0.34) 0%,rgba(236,236,236,0) 70%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: radial-gradient(ellipse at center,  rgba(193,193,193,0.34) 0%,rgba(236,236,236,0) 70%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57c1c1c1', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+			z-index: 5;
+		}
+
+		&:before {
+			top: -50px;
+			left: -50%;
+		}
+
+		&:after {
+			bottom: -50px;
+			left: -50%;
+		}
+
+		.mask-before, 
+		.mask-after {
+			display: block;
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			background: #fff;
+		}
+
+		.mask-before {
+			left: -50%;
+		}
+
+		.mask-after {
+			right: -50%;
+		}
+
+		.subscription-invite {
+			padding: 22px 0;
+			font-size: 18px;
+		}
+
+		.subscription-form {
+			position: relative;
+
+			input {
+				width: 100%;
+				padding: 14px 100px 15px 19px;
+				font-size: 15px;
+				border: 1px solid #ddd;
+
+				&:focus {
+					outline: none;
+				}
+			}
+
+			input::-webkit-input-placeholder {
+				color: #737a88;
+			}
+
+			input::-moz-placeholder {
+				color: #737a88;
+			}
+
+			input:-ms-input-placeholder {
+				color: #737a88;
+			}
+
+			input:-moz-placeholder {
+				color: #737a88;
+			}
+
+			button {
+			    padding: 13px 15px 11px;
+			    border: 0;
+			    border-radius: 3px;
+			    position: absolute;
+			    top: 6px;
+			    right: 5px;
+			    font-size: 11px;
+			    text-transform: uppercase;
+			    cursor: pointer;
+			    background: #353A45;
+			    color: #fff;
+
+				&:hover {
+					background: darken(#353A45, 10%);
+				}
+
+				@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+					top: 4px;  
+				}
+			}
+		}
+	}
+}
+
+/* Media Queries ------------------------------ */
+@media screen and (max-width: 992px) {
+	.section-download {
+
+		.subscription {
+			&:after, &:before {
+				width: 100%;
+				left: 0px;
+			}
+
+			.mask-before,
+			.mask-after {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.section-download {
+		padding-top: 30px;
+		
+		.img-holder {
+			padding-right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 543px) {
+
+	.btn-full-width {
+		margin-bottom: 15px;
+	}
+
+	.section-download {
+		padding-top: 30px;
+
+		.subscription {
+			.subscription-form {
+				input {
+					padding-left: 11px;
+				}
+			}
+		}
+	}
+}
+
+/**/
+/*-----------------------------------------------------------
+[ 6.9. Social Links / .section-social-links ]
+-----------------------------------------------------------*/
+.section-social-links {
+	padding: 67px 0 93px;
+	text-align: center;
+
+	ul {
+		display: inline-block;
+		margin: 33px 0 0;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			display: block;
+			float: left;
+
+			+ li {
+				margin-left: 10px;
+			}
+
+			a {
+			    box-sizing: border-box;
+				display: block;
+				width: 44px; 
+				height: 44px;
+				padding-top: 8px;
+				border: 1px solid #F8395D;
+				font-size: 19px;
+				-webkit-transition: all 0.3s ease;
+				transition: all 0.3s ease;
+				background: transparent;
+				color: #F8395D;
+
+				&:hover {
+					background: #F8395D;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 543px) {
+
+	.section-social-links {
+		padding: 30px 0;
+	}
+}

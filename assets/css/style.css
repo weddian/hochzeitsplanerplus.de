@@ -1,0 +1,1600 @@
+/* ----------------------------------------------------------
+
+   Author: Theme19
+   Date Created: 02/10/2017
+
+------------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+[Table of contents]
+-------------------------------------------------------------
+
+1. Common styles
+2. Header
+3. Footer
+4. Fonts
+5. Colors
+6. Content
+	6.1. Description / .description
+	6.2. Features / .features
+	6.3. Description with accordion / .description-accordion
+	6.4. Section Video / .section-video
+	6.5. Section with tabs / .section-tabs
+	6.6. Section with carousel / .section-carousel
+	6.7. Positioned boxes / .positioned-boxes
+	6.8. Call to actions / .section-download
+	6.9. Social Links / .section-social-links
+
+-----------------------------------------------------------
+
+*/
+/*-----------------------------------------------------------
+[ 1. Common styles ]
+-------------------------------------------------------------
+
+/* General styles */
+body {
+  background: #fff;
+}
+
+h1 {
+  font-weight: 200;
+  font-size: 48px;
+}
+
+h2 {
+  margin: 26px 0;
+  font-weight: 200;
+  font-size: 48px;
+}
+
+hr {
+  margin: 0;
+  border-color: #ECECEC;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* General classes */
+.subtitle {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Buttons */
+.btn {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+}
+
+.btn-large {
+  width: 210px;
+  padding: 19px 0 17px;
+}
+
+.btn-medium {
+  width: 110px;
+  padding: 19px 0 17px;
+}
+
+.btn-full-width {
+  display: block;
+  padding: 14px 0 10px;
+}
+.btn-full-width i {
+  padding-right: 15px;
+  position: relative;
+  top: -2px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+/* Wipe placeholder on focus */
+#subscription-input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+#subscription-input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+#subscription-input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+#subscription-input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+/* Media Queries ------------------------------------- */
+@media screen and (max-width: 991px) {
+  .btn-medium {
+    padding: 14px 0 13px;
+  }
+}
+@media screen and (max-width: 767px) {
+  h1, h2 {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 543px) {
+  h1, h2 {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .btn-large {
+    width: 190px;
+    padding: 14px 0;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 2. Header ]
+-----------------------------------------------------------*/
+.main-header {
+  position: relative;
+  text-align: center;
+  background: #51153B url(http://placehold.it/1920x920) no-repeat bottom center;
+  background-size: cover;
+}
+.main-header:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.main-header > * {
+  position: relative;
+  z-index: 10;
+}
+.main-header .site-logo {
+  display: inline-block;
+  margin-top: 14px;
+  position: relative;
+  z-index: 10;
+}
+.main-header .site-logo img {
+  display: none;
+}
+.main-header .site-logo span {
+  display: block;
+  width: 132px;
+  height: 65px;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+   * Set a base background for 1x environments.
+   */
+  background: url("../../img/logo.png") center center no-repeat;
+  background-size: 132px 65px;
+  /*
+   * Create an @2x-ish media query.
+   */
+  /*
+   * Create media queries for all environments that the user has
+   * provided images for.
+   */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  .main-header .site-logo span {
+    background: url("../../img/logo@2x.png") center center no-repeat;
+    background-size: 132px 65px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .main-header .site-logo span {
+    background: url("../../img/logo@2x.png") center center no-repeat;
+    background-size: 132px 65px;
+  }
+}
+.main-header .menu-btn {
+  display: none;
+}
+.main-header .main-nav {
+  margin-top: -65px;
+  text-align: center;
+}
+.main-header .main-nav ul {
+  width: 100%;
+  display: inline-block;
+}
+.main-header .main-nav ul li {
+  display: inline-block;
+  margin: 0 28px;
+}
+.main-header .main-nav ul li.spacer {
+  width: 26.5%;
+}
+.main-header .main-nav ul li a {
+  display: block;
+  padding: 10px 0;
+  position: relative;
+  font-weight: 400;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.main-header .main-nav ul li a:after {
+  content: '';
+  width: 0;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  transition: width 0.3s ease;
+  background: #fff;
+}
+.main-header .main-nav ul li a:hover:after {
+  width: 100%;
+}
+.main-header .header-inner {
+  margin: 129px 0 50px;
+}
+.main-header .header-inner h1 {
+  margin: 34px 0;
+  color: #fff;
+}
+.main-header .header-inner .subtitle {
+  margin-bottom: 32px;
+  color: #fff;
+}
+.main-header .scroll-indicator {
+  display: inline-block;
+  margin: 339px 0 44px;
+}
+.main-header .scroll-indicator .img {
+  display: inline-block;
+  width: 20px;
+  height: 38px;
+  margin-bottom: 3px;
+  position: relative;
+  /*
+   * Set a counter and get the length of the image path.
+   */
+  /*
+   * Loop ver the image path and figure out the
+   * position of the dot where the extension begins.
+   */
+  /*
+   * If we were able to figure out where the extension is,
+   * slice the path into a base and an extension. Use that to
+   * calculate urls for different density environments. Set
+   * values for different environments.
+   */
+  /*
+   * Set a base background for 1x environments.
+   */
+  background: url("../../img/icons/scroll-down.png") center center no-repeat;
+  background-size: 20px 38px;
+  /*
+   * Create an @2x-ish media query.
+   */
+  /*
+   * Create media queries for all environments that the user has
+   * provided images for.
+   */
+  /*
+   * If anything went wrong trying to separate the file from its
+   * extension, set a background value without doing anything to it.
+   */
+}
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
+  .main-header .scroll-indicator .img {
+    background: url("../../img/icons/scroll-down@2x.png") center center no-repeat;
+    background-size: 20px 38px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .main-header .scroll-indicator .img {
+    background: url("../../img/icons/scroll-down@2x.png") center center no-repeat;
+    background-size: 20px 38px;
+  }
+}
+.main-header .scroll-indicator .img:after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 6px;
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  background: #D37E8E;
+  -webkit-animation: scrollAnimation 1s linear infinite;
+  animation: scrollAnimation 1s linear infinite;
+}
+.main-header .scroll-indicator a {
+  display: block;
+  font-size: 13px;
+  color: #D37E8E;
+}
+.main-header .scroll-indicator a:hover, .main-header .scroll-indicator a:focus {
+  color: #edcad1;
+  text-decoration: none;
+}
+
+@-webkit-keyframes scrollAnimation {
+  0% {
+    top: 6px;
+  }
+  50% {
+    top: 18px;
+  }
+  100% {
+    top: 6px;
+  }
+}
+@keyframes scrollAnimation {
+  0% {
+    top: 6px;
+  }
+  50% {
+    top: 18px;
+  }
+  100% {
+    top: 6px;
+  }
+}
+/* Media Queries -------------------------------------------- */
+@media screen and (max-width: 1199px) {
+  .main-header .main-nav ul li {
+    margin: 0 22px;
+  }
+  .main-header .scroll-indicator {
+    margin-top: 350px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .main-header .main-nav ul li {
+    margin: 0 14px;
+  }
+  .main-header .main-nav ul li.spacer {
+    width: 20%;
+  }
+  .main-header .scroll-indicator {
+    margin-top: 250px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-header {
+    position: relative;
+  }
+  .main-header .scroll-indicator {
+    margin-top: 150px;
+  }
+  .main-header .menu-btn {
+    display: block;
+    width: 41px;
+    height: 39px;
+    padding: 6px;
+    border-radius: 1px;
+    position: absolute;
+    top: 27px;
+    left: 20px;
+    transition: left 0.3s ease;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .main-header .menu-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 7px;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+  .main-header .menu-btn span:first-child {
+    margin-top: 2px;
+    -webkit-transform-origin: center left;
+    -ms-transform-origin: center left;
+        transform-origin: center left;
+  }
+  .main-header .menu-btn span:last-child {
+    margin-bottom: 0;
+    -webkit-transform-origin: center left;
+    -ms-transform-origin: center left;
+        transform-origin: center left;
+  }
+  .main-header .menu-btn.opened {
+    left: 220px;
+    transition: left 0.3s ease;
+    background: #671838;
+  }
+  .main-header .menu-btn.opened span {
+    width: 110%;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  .main-header .menu-btn.opened span:first-child {
+    margin-top: -2px;
+    -webkit-transform: rotate(42deg);
+    -ms-transform: rotate(42deg);
+        transform: rotate(42deg);
+    top: 4px;
+    left: 2px;
+  }
+  .main-header .menu-btn.opened span:nth-child(2) {
+    opacity: 0;
+  }
+  .main-header .menu-btn.opened span:last-child {
+    -webkit-transform: rotate(-42deg);
+    -ms-transform: rotate(-42deg);
+        transform: rotate(-42deg);
+    left: 2px;
+  }
+  .main-header .main-nav {
+    height: 100%;
+    margin-top: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    transition: all 0.3s ease;
+    background: #fff;
+    z-index: 10;
+  }
+  .main-header .main-nav.opened {
+    left: 0;
+  }
+  .main-header .main-nav ul {
+    display: block;
+    width: 200px;
+    padding: 10px 0;
+    background: #fff;
+  }
+  .main-header .main-nav ul li {
+    display: block;
+    text-align: left;
+  }
+  .main-header .main-nav ul li.spacer {
+    display: none;
+  }
+  .main-header .main-nav ul li a {
+    font-size: 14px;
+  }
+  .main-header .header-inner {
+    margin-top: 60px;
+  }
+  .main-header .header-inner .subtitle br {
+    display: none;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 3. Footer ]
+-----------------------------------------------------------*/
+.footer {
+  background: #F4F4F4;
+  padding: 18px 0;
+  font-size: 13px;
+  line-height: 17px;
+  text-align: center;
+  color: #737a88;
+}
+.footer br {
+  display: none;
+}
+
+/* Media Queries ------------------------------ */
+@media screen and (max-width: 543px) {
+  .footer br {
+    display: block;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 4. Fonts ]
+-----------------------------------------------------------*/
+@font-face {
+  font-family: 'libre_franklinthin';
+  src: url("../../fonts/librefranklin-thin-webfont.woff2") format("woff2"), url("../../fonts/librefranklin-thin-webfont.woff") format("woff"), url("../../fonts/LibreFranklin-Thin.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'libre_franklinlight';
+  src: url("../../fonts/librefranklin-light-webfont.woff2") format("woff2"), url("../../fonts/librefranklin-light-webfont.woff") format("woff"), url("../../fonts/LibreFranklin-Light.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'libre_franklinregular';
+  src: url("../../fonts/librefranklin-regular-webfont.woff2") format("woff2"), url("../../fonts/librefranklin-regular-webfont.woff") format("woff"), url("../../fonts/LibreFranklin-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'libre_franklinbold';
+  src: url("../../fonts/librefranklin-bold-webfont.woff2") format("woff2"), url("../../fonts/librefranklin-bold-webfont.woff") format("woff"), url("../../fonts/LibreFranklin-Bold.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Base styles */
+body {
+  font-family: "libre_franklinregular", sans-serif;
+}
+
+h1 {
+  font-family: "libre_franklinthin", sans-serif;
+}
+
+h2 {
+  font-family: "libre_franklinthin", sans-serif;
+}
+
+/* Genreal classes */
+.subtitle {
+  font-family: "libre_franklinlight", sans-serif;
+}
+
+/* Positioned boxes */
+.positioned-boxes .box .price {
+  font-family: "libre_franklinthin", sans-serif;
+}
+
+/* Call to action */
+.section-download .subscription .subscription-invite {
+  font-family: "libre_franklinbold", sans-serif;
+}
+.section-download .subscription .subscription-form input {
+  font-family: "libre_franklinregular", sans-serif;
+}
+.section-download .subscription .subscription-form button {
+  font-family: "libre_franklinregular", sans-serif;
+}
+
+/* Accordeon description */
+.description-accordion .accordion li .header[aria-expanded="true"] span {
+  font-family: "libre_franklinbold", sans-serif;
+}
+
+/**/
+/*-----------------------------------------------------------
+[ 5. Colors ]
+-----------------------------------------------------------*/
+/* Headline button */
+.btn {
+  background: #F8395D;
+}
+.btn:hover {
+  background: #f72049;
+}
+
+/* Section description */
+.description .description-points .icon {
+  background-color: #F8395D;
+}
+
+/* Section accordion description */
+.description-accordion .accordion li a:before {
+  color: #F8395D;
+}
+
+/* Section tabs */
+.section-tabs .nav-pills {
+  background-color: #F8395D;
+}
+
+/* Section carousel */
+.carousel .slick-dots li.slick-active button:before {
+  background: #F8395D;
+}
+
+/* Positioned boxes */
+.positioned-boxes:before {
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #5a3384 0%, #792045 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.main-header:after {
+  background: linear-gradient(to right, rgba(198, 33, 68, 0.8) 0%, rgba(41, 10, 89, 0.8) 100%);
+}
+
+/* Media Queries ------------------------------------ */
+@media screen and (max-width: 767px) {
+  /* Main menu link colors */
+  .main-header .menu-btn {
+    background: #591539;
+  }
+  .main-header .main-nav ul li + li {
+    border-top: 1px solid #38113E;
+  }
+  .main-header .main-nav ul li a {
+    color: #38113E;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 6.1. Description / .description ]
+-----------------------------------------------------------*/
+.description {
+  padding: 68px 0 0;
+  text-align: center;
+}
+.description .subtitle strong {
+  font-weight: 700;
+}
+.description .description-points {
+  margin-top: 92px;
+  margin-bottom: 78px;
+}
+.description .description-points .icon {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  border-radius: 3px;
+}
+.description .description-points .icon.icon-bootstrap {
+  background-image: url(../../img/icons/icon-bootstrap.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.description .description-points .icon.icon-flexible {
+  background-image: url(../../img/icons/icon-flexible.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.description .description-points .icon.icon-support {
+  background-image: url(../../img/icons/icon-suport.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.description .description-points .title {
+  margin: 18px 0 9px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.description .description-points p {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/* Media Queries ----------------------------- */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .description {
+    padding-top: 40px;
+  }
+  .description .description-points {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .description {
+    padding-top: 30px;
+  }
+  .description .description-points {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 543px) {
+  .description .subtitle br {
+    display: none;
+  }
+  .description .description-points > div + div {
+    margin-top: 35px;
+  }
+  .description .description-points p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 6.2. Features / .features ]
+-----------------------------------------------------------*/
+.features {
+  padding: 67px 0 0;
+  text-align: center;
+}
+.features img {
+  max-width: 100%;
+}
+.features .title {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: left;
+}
+.features p {
+  font-size: 15px;
+  line-height: 24px;
+  text-align: left;
+}
+.features .inner-content {
+  margin: 76px -15px 90px;
+}
+.features .inner-content .feature-boxes {
+  margin-top: 31px;
+}
+.features .inner-content .feature-boxes .feature-box {
+  margin: 11px 0;
+}
+.features .inner-content .feature-boxes .feature-box img {
+  margin-top: 4px;
+}
+.features .img-wrapper {
+  width: 220px;
+  height: 453px;
+  margin: 0 auto;
+  background: url(../../img/bgi/phone.png) no-repeat center center;
+  background-size: 100% 100%;
+}
+.features .img-wrapper .img-holder {
+  padding: 52px 11px 0 12px;
+}
+.features .img-wrapper .img-holder img {
+  width: 100%;
+}
+
+/* Media Queries --------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .features {
+    padding-top: 60px;
+  }
+  .features .inner-content {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .features .img-wrapper {
+    width: 200px;
+    height: 403px;
+  }
+  .features .img-wrapper .img-holder {
+    padding: 41px 11px 0 11px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .features .inner-content .feature-boxes {
+    margin-top: -12px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .features {
+    padding-top: 60px;
+  }
+  .features .inner-content {
+    margin: 55px 0 30px;
+  }
+}
+@media screen and (min-width: 544px) and (max-width: 767px) {
+  .features .img-wrapper {
+    width: 183px;
+    height: 376px;
+  }
+  .features .img-wrapper .img-holder {
+    padding: 43px 10px 0 10px;
+  }
+}
+@media screen and (max-width: 543px) {
+  .features {
+    padding-top: 50px;
+  }
+  .features .subtitle br {
+    display: none;
+  }
+  .features .inner-content .feature-boxes {
+    margin-top: 40px;
+  }
+  .features .inner-content .feature-boxes .feature-box {
+    margin: 15px 0;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 6.3. Description with accordion / .description-accordion ]
+-----------------------------------------------------------*/
+.description-accordion {
+  padding-top: 96px;
+  background-color: #E8E8E8;
+}
+.description-accordion .subtitle {
+  font-size: 15px;
+  letter-spacing: 0.1px;
+}
+.description-accordion .accordion {
+  min-height: 371px;
+  margin-top: 52px;
+  padding: 0;
+  list-style-type: none;
+}
+.description-accordion .accordion li {
+  margin-bottom: 20px;
+  background: #fff;
+}
+.description-accordion .accordion li .header {
+  display: block;
+  width: 100%;
+  height: 60px;
+  padding-left: 45px;
+  padding-right: 40px;
+  position: relative;
+  color: #737a88;
+}
+.description-accordion .accordion li .header:hover, .description-accordion .accordion li .header:focus {
+  color: #737a88;
+  text-decoration: none;
+}
+.description-accordion .accordion li .header[aria-expanded="true"]:after {
+  content: "\f106";
+}
+.description-accordion .accordion li .header span {
+  display: block;
+  position: relative;
+  top: 50%;
+  font-size: 15px;
+  line-height: 20px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+}
+.description-accordion .accordion li .header:before {
+  content: "\f058";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 20px;
+}
+.description-accordion .accordion li .header:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 13px;
+  right: 14px;
+  font-size: 23px;
+  color: #ccc;
+}
+.description-accordion .accordion li .content {
+  padding: 5px 20px 10px 45px;
+  font-size: 15px;
+  color: #737a88;
+}
+.description-accordion .container {
+  position: relative;
+}
+.description-accordion .container .img-wrapper {
+  width: 371px;
+  height: 542px;
+  position: absolute;
+  bottom: 0;
+  right: -44px;
+}
+.description-accordion .container .img-wrapper .bg-image {
+  width: 100%;
+  height: 100%;
+  background: url(../../img/bgi/hand-held-phone.png) no-repeat center center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.description-accordion .container .img-wrapper img {
+  position: absolute;
+  top: 48px;
+  left: 53px;
+  z-index: 1;
+}
+
+/* Media Queries ------------------------------------------------ */
+@media screen and (max-width: 1280px) {
+  .description-accordion .container .img-wrapper {
+    right: 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .description-accordion {
+    padding-top: 60px;
+  }
+  .description-accordion .container .img-wrapper {
+    display: none;
+  }
+  .description-accordion .accordion {
+    min-height: auto;
+    min-height: initial;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .description-accordion {
+    padding-top: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .description-accordion {
+    padding-top: 20px;
+  }
+  .description-accordion .accordion {
+    margin-bottom: 40px;
+  }
+  .description-accordion .accordion li .header {
+    height: auto;
+  }
+  .description-accordion .accordion li .header:before, .description-accordion .accordion li .header:after {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .description-accordion .accordion li .header span {
+    padding: 15px 0;
+    position: static;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@media screen and (max-width: 543px) {
+  .description-accordion .accordion li .content {
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 6.4. Section Video / .section-video ]
+-----------------------------------------------------------*/
+.section-video {
+  margin: 93px 0 92px;
+  text-align: center;
+}
+.section-video .video-holder {
+  margin-top: 44px;
+}
+.section-video iframe {
+  width: 100%;
+  height: 424px;
+  border: none;
+}
+
+/* Media Queries ----------------------------- */
+@media screen and (max-width: 1199px) {
+  .section-video iframe {
+    height: 345px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .section-video iframe {
+    height: 330px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .section-video {
+    margin: 60px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-video {
+    margin: 50px 0;
+  }
+  .section-video iframe {
+    height: 260px;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 6.5. Section with tabs / .section-tabs ]
+-----------------------------------------------------------*/
+.section-tabs {
+  padding-top: 67px;
+  background: #353A45;
+  text-align: center;
+}
+.section-tabs h2 {
+  color: #fff;
+}
+.section-tabs .nav-pills {
+  display: inline-block;
+  margin-top: 14px;
+  border-radius: 4px;
+}
+.section-tabs .nav-pills .nav-item {
+  margin: 0;
+  float: left;
+}
+.section-tabs .nav-pills .nav-item + .nav-item {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+.section-tabs .nav-pills .nav-item:first-child .nav-link {
+  border-radius: 4px 0 0 4px;
+}
+.section-tabs .nav-pills .nav-item:last-child .nav-link {
+  border-radius: 0 4px 4px 0;
+}
+.section-tabs .nav-pills .nav-item .nav-link {
+  border-radius: 0;
+  padding: 17px 40px;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.section-tabs .nav-pills .nav-item .nav-link.active {
+  color: #353a45;
+  background: #fff;
+}
+.section-tabs .tab-pane.fade.in {
+  opacity: 1;
+}
+.section-tabs .tab-pane p {
+  margin-top: 37px;
+  margin-bottom: 50px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737a88;
+}
+.section-tabs .tab-pane .img-holder {
+  width: 707px;
+  margin: 0 auto;
+  margin-top: 93px;
+  text-align: center;
+}
+.section-tabs .tab-pane .img-holder img {
+  max-width: 100%;
+  display: block;
+  float: left;
+}
+.section-tabs .tab-pane .img-holder img.secondary {
+  margin-top: 56px;
+  opacity: 0.8;
+}
+
+/* Media Queries ----------------------------- */
+@media screen and (max-width: 991px) {
+  .section-tabs .tab-pane p br {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-tabs .tab-pane .img-holder {
+    width: 100%;
+  }
+  .section-tabs .tab-pane .img-holder img.primary {
+    width: 36.35%;
+  }
+  .section-tabs .tab-pane .img-holder img.secondary {
+    width: 31.82%;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 543px) {
+  .section-tabs {
+    padding-top: 30px;
+  }
+  .section-tabs .nav-pills .nav-item .nav-link {
+    padding: 17px 25px;
+  }
+  .section-tabs .tab-pane p {
+    margin-bottom: 40px;
+  }
+  .section-tabs .tab-pane .img-holder {
+    margin-top: 60px;
+    text-align: center;
+  }
+  .section-tabs .tab-pane .img-holder img {
+    float: none;
+  }
+  .section-tabs .tab-pane .img-holder img.primary {
+    display: inline-block;
+    width: auto;
+  }
+  .section-tabs .tab-pane .img-holder img.secondary {
+    display: none;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 6.6. Section with carousel / .section-carousel ]
+-----------------------------------------------------------*/
+.section-carousel {
+  padding-top: 67px;
+  padding-bottom: 64px;
+  text-align: center;
+  background: url(../../img/bgi/screenshots-bg.png) no-repeat center center;
+  background-size: cover;
+}
+.section-carousel .subtitle {
+  margin-bottom: 69px;
+}
+
+.carousel {
+  width: 100%;
+}
+.carousel .slick-slide {
+  text-align: center;
+}
+.carousel .slick-slide img {
+  display: inline-block;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.1);
+}
+.carousel .slick-list {
+  padding-bottom: 40px;
+}
+.carousel .slick-dots {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 0;
+  list-style-type: none;
+}
+.carousel .slick-dots li {
+  display: inline-block;
+}
+.carousel .slick-dots li button {
+  display: block;
+  height: 0;
+  padding: 7px 7px;
+  border: 0;
+  position: relative;
+  text-indent: -9999px;
+  background: none;
+}
+.carousel .slick-dots li button:focus {
+  outline: none;
+}
+.carousel .slick-dots li button:before {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+/* Media Queries ----------------------- */
+@media screen and (max-width: 543px) {
+  .section-carousel {
+    padding: 50px 0 20px;
+  }
+  .section-carousel .subtitle {
+    margin-bottom: 40px;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 6.7. Positioned boxes / .positioned-boxes ]
+-----------------------------------------------------------*/
+.positioned-boxes {
+  padding: 66px 0 97px;
+  position: relative;
+  background: url(http://placehold.it/1972x930) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+.positioned-boxes:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.positioned-boxes > * {
+  position: relative;
+  z-index: 1;
+}
+.positioned-boxes .subtitle {
+  margin-bottom: 48px;
+}
+.positioned-boxes .box {
+  padding: 54px 20px 59px;
+  background: #16181D;
+  position: relative;
+  overflow: hidden;
+}
+.positioned-boxes .box > * {
+  position: relative;
+  z-index: 5;
+}
+.positioned-boxes .box:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.positioned-boxes .box:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 190px;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+}
+.positioned-boxes .box.secondary {
+  margin-top: 30px;
+  padding-top: 24px;
+  padding-bottom: 30px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+}
+.positioned-boxes .box.secondary.basic {
+  right: -30px;
+}
+.positioned-boxes .box.secondary.premium {
+  left: -30px;
+}
+.positioned-boxes .box .title {
+  margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 19px;
+}
+.positioned-boxes .box .price {
+  margin-bottom: 5px;
+  font-size: 48px;
+  line-height: 37px;
+}
+.positioned-boxes .box .price span {
+  display: block;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 13px;
+  color: #716776;
+}
+.positioned-boxes .box ul {
+  min-height: 275px;
+  padding: 0;
+  list-style-type: none;
+}
+.positioned-boxes .box ul li {
+  padding: 15px 0 14px;
+  border-top: 1px solid #2E3034;
+  font-size: 15px;
+}
+.positioned-boxes .box.standard:before {
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #321c25 0%, #321c25 10%, #c2183a 24%, #d31a3e 50%, #c2183a 76%, #321c25 90%, #321c25 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#321c25', endColorstr='#321c25',GradientType=1 );
+  /* IE6-9 */
+}
+.positioned-boxes .box.standard:after {
+  top: -125px;
+  height: 315px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9f2c44+0,9f2c44+100&1+0,0.51+40,0.24+62,0+86,0+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #9f2c44 0%, rgba(159, 44, 68, 0.51) 40%, rgba(159, 44, 68, 0.24) 62%, rgba(159, 44, 68, 0) 86%, rgba(159, 44, 68, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9f2c44', endColorstr='#009f2c44',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+.positioned-boxes .box.basic:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9e96a0+0,9e96a0+100&0+0,0.4+10,0.8+25,1+50,1+75,0.4+90,0+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(158, 150, 160, 0) 0%, rgba(158, 150, 160, 0.4) 10%, rgba(158, 150, 160, 0.8) 25%, #9e96a0 50%, #9e96a0 75%, rgba(158, 150, 160, 0.4) 90%, rgba(158, 150, 160, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009e96a0', endColorstr='#009e96a0',GradientType=1 );
+  /* IE6-9 */
+}
+.positioned-boxes .box.basic:after {
+  width: 90%;
+  top: -77px;
+  left: 5%;
+  height: 150px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9e96a0+0,9e96a0+100&0.6+0,0.2+46,0+70,0+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(158, 150, 160, 0.6) 0%, rgba(158, 150, 160, 0.2) 46%, rgba(158, 150, 160, 0) 70%, rgba(158, 150, 160, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999e96a0', endColorstr='#009e96a0',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+.positioned-boxes .box.premium:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2e88a2+0,2e88a2+100&0+0,0+10,0.8+20,1+50,0.8+80,0+90,0+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(46, 136, 162, 0) 0%, rgba(46, 136, 162, 0) 10%, rgba(46, 136, 162, 0.8) 20%, #2e88a2 50%, rgba(46, 136, 162, 0.8) 80%, rgba(46, 136, 162, 0) 90%, rgba(46, 136, 162, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002e88a2', endColorstr='#002e88a2',GradientType=1 );
+  /* IE6-9 */
+}
+.positioned-boxes .box.premium:after {
+  width: 90%;
+  top: -105px;
+  left: 5%;
+  height: 190px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3a4965+0,3a4965+100&0.8+0,0.6+22,0.4+47,0+75,0+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(58, 73, 101, 0.8) 0%, rgba(58, 73, 101, 0.6) 22%, rgba(58, 73, 101, 0.4) 47%, rgba(58, 73, 101, 0) 75%, rgba(58, 73, 101, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc3a4965', endColorstr='#003a4965',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+/* Media Queries ------------------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .positioned-boxes .box {
+    padding-top: 38px;
+  }
+  .positioned-boxes .box.secondary {
+    margin-top: 21px;
+    padding-top: 18px;
+  }
+  .positioned-boxes .box .title {
+    margin-bottom: 20px;
+  }
+  .positioned-boxes .box .price {
+    font-size: 40px;
+  }
+  .positioned-boxes .box ul {
+    min-height: 235px;
+  }
+  .positioned-boxes .box ul li {
+    padding: 13px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .positioned-boxes {
+    padding: 40px 0;
+  }
+
+  .positioned-boxes .box {
+    position: relative;
+  }
+  .positioned-boxes .box.secondary {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .positioned-boxes .box.secondary.basic {
+    margin-top: 0;
+    right: 0;
+  }
+  .positioned-boxes .box.secondary.premium {
+    margin-top: 30px;
+    left: 0;
+  }
+  .positioned-boxes .box.main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .positioned-boxes .box.main.standard {
+    margin-top: 30px;
+  }
+  .positioned-boxes .box ul {
+    min-height: auto;
+    min-height: initial;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 6.8. Call to actions / .section-download ]
+-----------------------------------------------------------*/
+.section-download {
+  padding: 67px 0 0;
+  text-align: center;
+}
+.section-download .subtitle {
+  margin-bottom: 44px;
+}
+.section-download .img-holder {
+  margin-top: 50px;
+  padding-right: 65px;
+}
+.section-download .img-holder img {
+  max-width: 100%;
+}
+.section-download .subscription {
+  position: relative;
+  z-index: 0;
+}
+.section-download .subscription > div {
+  padding: 13px 0 40px;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+.section-download .subscription:before, .section-download .subscription:after {
+  content: '';
+  display: block;
+  width: 200%;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c1c1c1+0,ffffff+100&0.34+0,0+70,0+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(193, 193, 193, 0.34) 0%, rgba(236, 236, 236, 0) 70%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57c1c1c1', endColorstr='#00ffffff',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  z-index: 5;
+}
+.section-download .subscription:before {
+  top: -50px;
+  left: -50%;
+}
+.section-download .subscription:after {
+  bottom: -50px;
+  left: -50%;
+}
+.section-download .subscription .mask-before,
+.section-download .subscription .mask-after {
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #fff;
+}
+.section-download .subscription .mask-before {
+  left: -50%;
+}
+.section-download .subscription .mask-after {
+  right: -50%;
+}
+.section-download .subscription .subscription-invite {
+  padding: 22px 0;
+  font-size: 18px;
+}
+.section-download .subscription .subscription-form {
+  position: relative;
+}
+.section-download .subscription .subscription-form input {
+  width: 100%;
+  padding: 14px 100px 15px 19px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+}
+.section-download .subscription .subscription-form input:focus {
+  outline: none;
+}
+.section-download .subscription .subscription-form input::-webkit-input-placeholder {
+  color: #737a88;
+}
+.section-download .subscription .subscription-form input::-moz-placeholder {
+  color: #737a88;
+}
+.section-download .subscription .subscription-form input:-ms-input-placeholder {
+  color: #737a88;
+}
+.section-download .subscription .subscription-form input:-moz-placeholder {
+  color: #737a88;
+}
+.section-download .subscription .subscription-form button {
+  padding: 13px 15px 11px;
+  border: 0;
+  border-radius: 3px;
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  font-size: 11px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #353A45;
+  color: #fff;
+}
+.section-download .subscription .subscription-form button:hover {
+  background: #1f2228;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .section-download .subscription .subscription-form button {
+    top: 4px;
+  }
+}
+
+/* Media Queries ------------------------------ */
+@media screen and (max-width: 992px) {
+  .section-download .subscription:after, .section-download .subscription:before {
+    width: 100%;
+    left: 0px;
+  }
+  .section-download .subscription .mask-before,
+  .section-download .subscription .mask-after {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-download {
+    padding-top: 30px;
+  }
+  .section-download .img-holder {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 543px) {
+  .btn-full-width {
+    margin-bottom: 15px;
+  }
+
+  .section-download {
+    padding-top: 30px;
+  }
+  .section-download .subscription .subscription-form input {
+    padding-left: 11px;
+  }
+}
+/**/
+/*-----------------------------------------------------------
+[ 6.9. Social Links / .section-social-links ]
+-----------------------------------------------------------*/
+.section-social-links {
+  padding: 67px 0 93px;
+  text-align: center;
+}
+.section-social-links ul {
+  display: inline-block;
+  margin: 33px 0 0;
+  padding: 0;
+  list-style-type: none;
+}
+.section-social-links ul li {
+  display: block;
+  float: left;
+}
+.section-social-links ul li + li {
+  margin-left: 10px;
+}
+.section-social-links ul li a {
+  box-sizing: border-box;
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding-top: 8px;
+  border: 1px solid #F8395D;
+  font-size: 19px;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: #F8395D;
+}
+.section-social-links ul li a:hover {
+  background: #F8395D;
+  color: #fff;
+}
+
+@media screen and (max-width: 543px) {
+  .section-social-links {
+    padding: 30px 0;
+  }
+}

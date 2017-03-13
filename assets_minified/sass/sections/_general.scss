@@ -1,0 +1,295 @@
+
+/* Section Video
+-----------------------------------------------------------*/
+
+.section-video {
+	margin: 93px 0 92px;
+	text-align: center;
+
+	.video-holder {
+		margin-top: 44px;
+	}
+
+	iframe {
+		width: 100%;
+		height: 424px;
+		border: none;
+	}
+}
+
+/* Media Queries ----------------------------- */
+@media screen and (max-width: 1199px) {
+
+	.section-video {
+		iframe {
+			height: 345px;
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+
+	.section-video {
+		iframe {
+			height: 330px;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+	.section-video {
+		margin: 60px 0; 
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.section-video {
+		margin: 50px 0;
+
+		iframe {
+			height: 260px;
+		}
+	}
+}
+
+/* Section Tabs
+-----------------------------------------------------------*/
+
+.section-tabs {
+	padding-top: 67px;
+	background: #353A45;
+	text-align: center;
+
+	h2 {
+		color: #fff;
+	}
+
+	.nav-pills {
+		display: inline-block;
+		margin-top: 14px;
+		border-radius: 4px;
+
+		.nav-item {
+			margin: 0;
+			float: left;
+
+			+ .nav-item {
+				border-left: 1px solid rgba(255,255,255, 0.3);
+			}
+
+			&:first-child {
+				.nav-link {
+					border-radius: 4px 0 0 4px;
+				}
+			}
+
+			&:last-child {
+				.nav-link {
+					border-radius: 0 4px 4px 0;
+				}
+			}
+
+			.nav-link {
+				border-radius: 0;
+				padding: 17px 40px;
+				font-weight: 700;
+			    font-size: 11px;
+			    text-transform: uppercase;
+			    color: #fff;
+
+			    &.active {
+			    	color: #353a45;
+			    	background: #fff;
+			    }
+			}
+		}
+	}
+
+	.tab-pane {
+
+		&.fade.in {
+			opacity: 1;
+		}
+
+		p {
+			margin-top: 37px;
+			margin-bottom: 50px;
+		    font-size: 15px;
+		    line-height: 24px;
+		    color: #737a88;
+		}
+
+		.img-holder {
+			width: 707px;
+			margin: 0 auto;
+			margin-top: 93px;
+			text-align: center;
+
+			img {
+				max-width: 100%;
+				display: block;
+				float: left;
+
+				&.secondary {
+					margin-top: 56px;
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+}
+
+/* Media Queries ----------------------------- */
+@media screen and (max-width: 991px) {
+	.section-tabs {
+
+		.tab-pane p  br {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.section-tabs {
+
+		.tab-pane {
+
+			.img-holder {
+				width: 100%;
+
+				img {
+
+					&.primary {
+						width: 36.35%;
+					}
+
+					&.secondary {
+						width: 31.82%;
+						margin-top: 40px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 543px) {
+
+	.section-tabs {
+		padding-top: 30px;
+
+		.nav-pills .nav-item .nav-link {
+			padding: 17px 25px;
+		}
+
+		.tab-pane {
+
+			p {
+				margin-bottom: 40px;
+			}
+
+			.img-holder {
+				margin-top: 60px;
+				text-align: center;
+
+				img {
+					float: none;
+
+					&.primary {
+						display: inline-block;
+						width: auto;
+					}
+
+					&.secondary {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Section Carousel
+-----------------------------------------------------------*/
+.section-carousel {
+	padding-top: 67px;
+	padding-bottom: 64px;
+	text-align: center;
+	background: url(../../img/bgi/screenshots-bg.png) no-repeat center center;
+	background-size: cover;
+
+	.subtitle {
+		margin-bottom: 69px;
+	}
+}
+
+.carousel {
+	width: 100%;
+
+	.slick-slide {
+		text-align: center;
+
+		img {
+			display: inline-block;
+			box-shadow: 0 5px 22px rgba(0,0,0,0.1);
+		}
+	}
+
+	.slick-list {
+		padding-bottom: 40px;
+	}
+
+	.slick-dots {
+		display: inline-block;
+		margin-top: 5px;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			display: inline-block;
+
+			button {
+				display: block;
+				height: 0;
+				padding: 7px 7px;
+				border: 0;
+				position: relative;
+				text-indent: -9999px;
+			    background: none;
+
+			    &:focus {
+			    	outline: none;
+			    }
+
+			    &:before {
+			    	content: '';
+			    	display: block;
+			    	width: 7px;
+			    	height: 7px;
+			    	border-radius: 5px;
+			    	background: rgba(0,0,0,0.3);
+			    	position: absolute;
+			    	top: 4px;
+			    	left: 4px;
+			    }
+			}
+		}
+	}
+}
+
+/* Media Queries ----------------------- */
+@media screen and (max-width: 543px) {
+
+	.section-carousel {
+		padding: 50px 0 20px;
+
+		.subtitle {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+/**/

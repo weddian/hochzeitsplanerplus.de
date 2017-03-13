@@ -1,0 +1,121 @@
+/* General styles */
+body {
+    background: #fff;
+}
+
+h1 {
+	font-weight: 200;
+	font-size: 48px;
+}
+
+h2 {
+	margin: 26px 0;
+	font-weight: 200;
+	font-size: 48px;
+}
+
+hr {
+	margin: 0;
+	border-color: #ECECEC;
+}
+
+a:focus {
+	outline: none; 
+}
+
+/* General classes */
+.subtitle {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+/* Buttons */
+.btn {
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #fff;
+
+	&:hover, &:focus {
+		color: #fff;
+	}
+}
+
+.btn-large {
+	width: 210px;
+	padding: 19px 0 17px;
+}
+
+.btn-medium {
+	width: 110px;
+	padding: 19px 0 17px;
+}
+
+.btn-full-width {
+	display: block;
+	padding: 14px 0 10px;
+
+	i {
+		padding-right: 15px;
+	    position: relative;
+	    top: -2px;
+	    font-size: 24px;
+	    vertical-align: middle;
+	}
+}
+
+/* Wipe placeholder on focus */
+#subscription-input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+#subscription-input:focus::-moz-placeholder {
+	color: transparent;
+}
+
+#subscription-input:focus:-ms-input-placeholder {
+	color: transparent;
+}
+
+#subscription-input:focus:-moz-placeholder {
+	color: transparent;
+}
+
+/* Media Queries ------------------------------------- */
+@media screen and (max-width: 991px) {
+
+	.btn-medium {
+		padding: 14px 0 13px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	h1, h2 {
+		font-size: 38px
+	}
+
+	.subtitle {
+		font-size: 15px;
+		line-height: 20px;
+	}
+}
+
+@media screen and (max-width: 543px) {
+
+	h1, h2 {
+		font-size: 34px;
+	}
+
+	.subtitle {
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	.btn-large {
+		width: 190px;
+		padding: 14px 0;
+	}
+}
+
+/**/

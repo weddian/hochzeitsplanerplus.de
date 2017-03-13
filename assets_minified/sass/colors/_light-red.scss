@@ -1,0 +1,91 @@
+$base-color: #F8395D;
+$menu-btn-bg: #591539;
+$border-color: #38113E;
+$gradient-start: rgba(90,51,132,1);
+$gradient-end: rgba(121,32,69,1);
+$header-gradient-start: rgba(198,33,68,0.6);
+$header-gradient-end: rgba(41,10,89,0.6);
+$mobile-menu-link-color: #38113E;
+
+/* Headline button */
+.btn {
+	background: $base-color;
+
+	&:hover {
+		background: darken($base-color, 5%);
+	}
+}
+
+/* Section description */
+.description { 
+	.description-points {
+		.icon {
+			background-color: $base-color;
+		}
+	}
+}
+
+/* Section accordion description */
+.description-accordion {
+	.accordion {
+		li a:before {
+			color: $base-color;
+		}
+	}
+}
+
+/* Section tabs */
+.section-tabs {
+	.nav-pills {
+		background-color: $base-color;
+	}
+}
+
+/* Section carousel */
+.carousel {
+	.slick-dots {
+		li.slick-active {
+			button:before {
+				background: $base-color;
+			}
+		}
+	}
+}
+
+/* Positioned boxes */
+.positioned-boxes:before {
+	background: -moz-linear-gradient(left, $gradient-start 0%, $gradient-end 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, $gradient-start 0%, $gradient-end 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, $gradient-start 0%, $gradient-end 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.main-header:after {
+	background: -moz-linear-gradient(left,  $header-gradient-start 0%, $header-gradient-end 100%); 
+    background: -webkit-linear-gradient(left,  $header-gradient-start 0%, $header-gradient-end 100%); 
+    background: linear-gradient(to right,  $header-gradient-start 0%, $header-gradient-end 100%);
+}
+
+/* Media Queries ------------------------------------ */
+@media screen and (max-width: 767px) {
+
+	/* Main menu link colors */
+	.main-header {
+
+		.menu-btn {
+			background: $menu-btn-bg;
+		}
+
+		.main-nav ul li {
+
+			+ li {
+				border-top: 1px solid $border-color;
+			}
+
+			a {
+				color: $mobile-menu-link-color;
+			}
+		}
+	}
+}
+
+/**/

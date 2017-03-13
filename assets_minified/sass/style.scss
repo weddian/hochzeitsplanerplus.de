@@ -1,0 +1,22 @@
+// Plugins
+@import 'plugins/slick';
+@import 'plugins/retina';
+
+// Components
+@import 'components/common';
+@import 'components/header';
+@import 'components/footer';
+
+// Font
+@import 'fonts/libre-franklin';
+
+// Colors
+@import 'colors/light-red';
+
+// Sections
+@import 'sections/description';
+@import 'sections/features';
+@import 'sections/description-accordion'; 
+@import 'sections/general';
+@import 'sections/positioned-boxes'; 
+@import 'sections/call_to_action';

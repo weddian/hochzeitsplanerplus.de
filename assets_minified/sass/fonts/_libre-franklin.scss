@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'libre_franklinthin';
+    src: url('../../fonts/librefranklin-thin-webfont.woff2') format('woff2'),
+         url('../../fonts/librefranklin-thin-webfont.woff') format('woff'),
+         url('../../fonts/LibreFranklin-Thin.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'libre_franklinlight';
+    src: url('../../fonts/librefranklin-light-webfont.woff2') format('woff2'),
+         url('../../fonts/librefranklin-light-webfont.woff') format('woff'),
+         url('../../fonts/LibreFranklin-Light.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'libre_franklinregular';
+    src: url('../../fonts/librefranklin-regular-webfont.woff2') format('woff2'),
+         url('../../fonts/librefranklin-regular-webfont.woff') format('woff'),
+         url('../../fonts/LibreFranklin-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'libre_franklinbold';
+    src: url('../../fonts/librefranklin-bold-webfont.woff2') format('woff2'),
+         url('../../fonts/librefranklin-bold-webfont.woff') format('woff'),
+         url('../../fonts/LibreFranklin-Bold.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$font-thin: 'libre_franklinthin', sans-serif;
+$font-light: 'libre_franklinlight', sans-serif;
+$font-regular: 'libre_franklinregular', sans-serif;
+$font-bold: 'libre_franklinbold', sans-serif;
+
+
+/* Base styles */
+body {
+    font-family: $font-regular;
+}
+
+h1 {
+	font-family: $font-thin; 
+}
+
+h2 {
+    font-family: $font-thin;
+}
+
+/* Genreal classes */
+.subtitle {
+	font-family: $font-light;
+}
+
+/* Positioned boxes */
+.positioned-boxes {
+
+    .box {
+        .price {
+            font-family: $font-thin;
+        }
+    }
+}
+
+/* Call to action */
+.section-download {
+
+    .subscription {
+
+        .subscription-invite {
+            font-family: $font-bold;
+        }
+
+        .subscription-form {
+
+            input {
+                font-family: $font-regular;
+            }
+
+            button {
+                font-family: $font-regular;
+            }
+        }
+    }
+}
+
+/* Accordeon description */
+.description-accordion .accordion li .header {
+    &[aria-expanded="true"] span {
+        font-family: $font-bold; 
+    }
+}
+
+/**/

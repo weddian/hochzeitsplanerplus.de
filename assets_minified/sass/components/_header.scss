@@ -1,0 +1,331 @@
+.main-header {
+    position: relative;
+	text-align: center;
+    background: #51153B url(http://placehold.it/1920x920) no-repeat bottom center;  
+    background-size: cover;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; left: 0; 
+        z-index: 5;
+    }
+
+    > * {
+        position: relative;
+        z-index: 10;
+    }
+
+    .site-logo {
+    	display: inline-block;
+    	margin-top: 14px;
+    	position: relative;
+    	z-index: 10;
+
+        img {
+            display: none;
+        }
+
+        span {
+            display: block;
+            width: 132px;
+            height: 65px;
+            @include retina('../../img/logo.png', 2, 132px 65px, center center no-repeat);
+        }
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .main-nav {
+    	margin-top: -65px;
+    	text-align: center;
+
+    	ul {
+    		width: 100%;
+    		display: inline-block;
+
+    		li {
+    			display: inline-block; 
+    			margin: 0 28px;
+
+    			&.spacer {
+    				width: 26.5%;
+    			}
+
+    			a {
+    				display: block;
+    				padding: 10px 0;
+    				position: relative;
+    				font-weight: 400;
+    				font-size: 11px;
+    				text-transform: uppercase;
+    				color: #fff;
+
+    				&:after {
+    					content: '';
+    					width: 0;
+    					height: 1px;
+    					position: absolute;
+    					left: 0;
+    					bottom: 1px;
+    					-webkit-transition: width 0.3s ease;
+    					transition: width 0.3s ease; 
+    					background: #fff;
+    				}
+
+    				&:hover:after {
+    					width: 100%; 
+    				}
+    			}
+    		}
+    	}
+    }
+
+    .header-inner {
+    	margin: 129px 0 50px;
+
+    	h1 {
+    		margin: 34px 0;
+    		color: #fff;
+    	}
+
+    	.subtitle {
+    		margin-bottom: 32px;
+    		color: #fff;
+    	}
+    }
+
+    .scroll-indicator {
+        display: inline-block;
+    	margin: 339px 0 44px;
+
+    	.img {
+            display: inline-block;
+            width: 20px;
+            height: 38px;
+    		margin-bottom: 3px;
+            position: relative;
+            @include retina('../../img/icons/scroll-down.png', 2, 20px 38px, center center no-repeat);
+
+            &:after {
+                content: '';
+                display: block;
+                width: 2px;
+                height: 6px;
+                position: absolute;
+                top: 6px;
+                left: 9px;
+                background: #D37E8E;
+                -webkit-animation: scrollAnimation 1s linear infinite;
+                animation: scrollAnimation 1s linear infinite;
+            }
+    	}
+
+    	a {
+            display: block;
+    		font-size: 13px;
+    		color: #D37E8E;
+
+    		&:hover, &:focus {
+    			color: lighten(#D37E8E, 20%);
+    			text-decoration: none;
+    		}
+    	}
+    }
+}
+
+@-webkit-keyframes scrollAnimation {
+    0% {
+        top: 6px;
+    }
+
+    50% {
+        top: 18px;
+    }
+
+    100% {
+        top: 6px;
+    }
+}
+
+@keyframes scrollAnimation {
+    0% {
+        top: 6px;
+    }
+
+    50% {
+        top: 18px;
+    }
+
+    100% {
+        top: 6px;
+    }
+}
+
+/* Media Queries -------------------------------------------- */
+@media screen and (max-width: 1199px) {
+
+    .main-header {
+
+        .main-nav ul li {
+            margin: 0 22px;
+        }
+
+        .scroll-indicator {
+            margin-top: 350px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+
+    .main-header {
+
+        .main-nav ul li {
+            margin: 0 14px;
+
+            &.spacer {
+                width: 20%;
+            }
+        }
+
+        .scroll-indicator {
+            margin-top: 250px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .main-header {
+        position: relative;
+
+        .scroll-indicator {
+            margin-top: 150px;
+        }
+
+        .menu-btn {
+            display: block;
+            width: 41px;
+            height: 39px;
+            padding: 6px;
+            border-radius: 1px;
+            position: absolute;
+            top: 27px;
+            left: 20px;
+            -webkit-transition: left 0.3s ease;
+            transition: left 0.3s ease;
+            cursor: pointer;
+            z-index: 10;
+
+            span {
+                display: block;
+                width: 100%;
+                height: 3px;
+                margin-bottom: 7px;
+                background: #fff;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+
+                &:first-child {
+                    margin-top: 2px;
+                    -webkit-transform-origin: center left;
+                    transform-origin: center left;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                    -webkit-transform-origin: center left;
+                    transform-origin: center left;
+                }
+            }
+
+            &.opened {
+                left: 220px;
+                -webkit-transition: left 0.3s ease;
+                transition: left 0.3s ease;
+                background: #671838;
+
+                span {
+                    width: 110%;
+                    margin-bottom: 10px;
+                    -webkit-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                    position: relative;
+
+                    &:first-child {
+                        margin-top: -2px;
+                        -webkit-transform: rotate(42deg);
+                        transform: rotate(42deg);
+                        top: 4px;
+                        left: 2px;
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:last-child {
+                        -webkit-transform: rotate(-42deg);
+                        transform: rotate(-42deg);
+                        left: 2px;
+                    }
+                }
+            }
+        }
+
+        .main-nav {
+            height: 100%;
+            margin-top: 0;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            left: -200px;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            background: #fff;
+            z-index: 10;
+
+            &.opened {
+                left: 0;
+            }
+
+            ul {
+                display: block;
+                width: 200px;
+                padding: 10px 0;
+                background: #fff;
+
+                li {
+                    display: block;
+                    text-align: left;
+
+                    &.spacer {
+                        display: none;
+                    }
+
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .header-inner {
+            margin-top: 60px;
+
+            .subtitle {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/**/

@@ -1,0 +1,189 @@
+.description-accordion {
+	padding-top: 96px;
+	background-color: #E8E8E8;
+
+	.subtitle {
+		font-size: 15px;
+		letter-spacing: 0.1px;
+	}
+
+	.accordion {
+		min-height: 371px;
+		margin-top: 52px;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			margin-bottom: 20px;
+			background: #fff;
+
+			.header {
+				display: block;
+				width: 100%;
+				height: 60px;
+				padding-left: 45px;
+				padding-right: 40px;
+				position: relative;
+				color: #737a88;
+
+				&:hover, &:focus {
+					color: #737a88;
+					text-decoration: none;
+				}
+
+				&[aria-expanded="true"] {
+					&:after {
+						content: "\f106";
+					}
+				}
+
+				span {
+					display: block;
+					position: relative;
+					top: 50%;
+					font-size: 15px;
+					line-height: 20px;
+					-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+				}
+
+				&:before {
+					content: "\f058";
+					font-family: FontAwesome;
+					position: absolute;
+					top: 15px;
+					left: 15px;
+					font-size: 20px;
+				}
+
+				&:after {
+					content: "\f107";
+					font-family: FontAwesome;
+					position: absolute;
+					top: 13px;
+					right: 14px;
+					font-size: 23px;
+					color: #ccc;
+				}
+			}
+
+			.content {
+				padding: 5px 20px 10px 45px;
+				font-size: 15px;
+				color: #737a88;
+			}
+		}
+	}
+
+	.container {
+		position: relative;
+
+		.img-wrapper {
+			width: 371px;
+			height: 542px;
+			position: absolute;
+			bottom: 0; 
+			right: -44px;
+
+			.bg-image {
+				width: 100%;
+				height: 100%;
+				background: url(../../img/bgi/hand-held-phone.png) no-repeat center center;
+				background-size: 100% 100%; 
+				position: absolute;
+				top: 0; 
+				left: 0;
+				z-index: 2;
+			}
+
+			img {
+				position: absolute;
+				top: 48px;
+				left: 53px;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+/* Media Queries ------------------------------------------------ */
+@media screen and (max-width: 1280px) {
+
+	.description-accordion {
+
+		.container {
+
+			.img-wrapper {
+				right: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.description-accordion {
+		padding-top: 60px;
+
+		.container {
+
+			.img-wrapper {
+				display: none;
+			}
+		}
+
+		.accordion {
+			min-height: auto;
+			min-height: initial;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+
+	.description-accordion {
+		padding-top: 40px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.description-accordion {
+		padding-top: 20px;
+
+		.accordion {
+			margin-bottom: 40px;
+
+			li .header {
+				height: auto;
+
+				&:before, &:after {
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				span {
+					padding: 15px 0;
+					position: static;
+					transform: translateY(0); 
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 543px) {
+
+	.description-accordion {
+
+		.accordion {
+
+			li .content {
+				padding-top: 10px;
+				padding-bottom: 15px; 
+			}
+		}
+	}
+}
+
+/**/
