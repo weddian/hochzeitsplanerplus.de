@@ -660,7 +660,7 @@ h2 {
 /**/
 /* Headline button */
 .btn {
-  background: #F8395D;
+  background: #DE1960;
 }
 .btn:hover {
   background: #f72049;
@@ -668,22 +668,22 @@ h2 {
 
 /* Section description */
 .description .description-points .icon {
-  background-color: #F8395D;
+  background-color: #DE1960;
 }
 
 /* Section accordion description */
 .description-accordion .accordion li a:before {
-  color: #F8395D;
+  color: #DE1960;
 }
 
 /* Section tabs */
 .section-tabs .nav-pills {
-  background-color: #F8395D;
+  background-color: #DE1960;
 }
 
 /* Section carousel */
 .carousel .slick-dots li.slick-active button:before {
-  background: #F8395D;
+  background: #DE1960;
 }
 
 /* Positioned boxes */
@@ -1632,14 +1632,14 @@ h2 {
   width: 44px;
   height: 44px;
   padding-top: 8px;
-  border: 1px solid #F8395D;
+  border: 1px solid #DE1960;
   font-size: 19px;
   transition: all 0.3s ease;
   background: transparent;
-  color: #F8395D;
+  color: #DE1960;
 }
 .section-social-links ul li a:hover {
-  background: #F8395D;
+  background: #DE1960;
   color: #fff;
 }
 
