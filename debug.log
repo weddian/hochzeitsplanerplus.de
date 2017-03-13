@@ -1,1 +1,2 @@
 [0313/105344.865:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Die Pipe wird gerade geschlossen. (0xE8)
+[0313/162943.297:ERROR:exception_handler_server.cc(524)] ConnectNamedPipe: Die Pipe wird gerade geschlossen. (0xE8)
